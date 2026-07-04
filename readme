@@ -1,0 +1,245 @@
+# Site de Eventos – Quartas Digitais
+
+## Descrição
+
+O **Site de Eventos – Quartas Digitais** é uma aplicação web desenvolvida para divulgar e gerir eventos dedicados ao Marketing Digital.
+
+A aplicação permite visualizar os eventos disponíveis, adicionar novos eventos, editar informações existentes e eliminar eventos já realizados ou cancelados.
+
+O projeto foi desenvolvido utilizando tecnologias web modernas, com comunicação entre o frontend e um servidor Node.js ligado a uma base de dados MySQL.
+
+---
+
+# Tecnologias utilizadas
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Bootstrap 5
+
+### Backend
+
+* Node.js
+* Express.js
+* MySQL2
+* dotenv
+
+### Base de Dados
+
+* MySQL
+
+---
+
+# Funcionalidades
+
+* Listagem automática dos eventos.
+* Adição de novos eventos.
+* Edição de eventos existentes.
+* Eliminação de eventos.
+* Atualização da lista sem necessidade de recarregar a página.
+* Ligação à base de dados MySQL através de API REST.
+
+---
+
+# Estrutura do projeto
+
+```
+Site_eventos
+│
+├── frontend
+│   ├── eventos.html
+│   ├── index.html
+│   ├── contato.html
+│   ├── app.js
+│   ├── styles.css
+│   └── Imagens
+│
+├── server.js
+├── package.json
+├── package-lock.json
+├── database.sql
+├── .env
+└── README.md
+```
+
+---
+
+# Base de Dados
+
+O projeto utiliza uma base de dados MySQL denominada:
+
+```
+site_eventos_db
+```
+
+Tabela:
+
+```
+eventos
+```
+
+Campos:
+
+| Campo | Tipo         |
+| ----- | ------------ |
+| id    | INT          |
+| nome  | VARCHAR(200) |
+| data  | DATE         |
+
+---
+
+# Instalação
+
+## 1. Clonar o projeto
+
+```bash
+git clone <url-do-repositorio>
+```
+
+ou descarregar o projeto em formato ZIP.
+
+---
+
+## 2. Instalar as dependências
+
+Na pasta do projeto executar:
+
+```bash
+npm install
+```
+
+---
+
+## 3. Configurar o ficheiro .env
+
+Criar um ficheiro chamado:
+
+```
+.env
+```
+
+Exemplo:
+
+```env
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_USER=root
+DATABASE_PASSWORD=sua_password
+DATABASE_NAME=site_eventos_db
+
+PORT=3000
+```
+
+---
+
+## 4. Criar a base de dados
+
+Executar o ficheiro:
+
+```
+database.sql
+```
+
+no MySQL Workbench.
+
+---
+
+## 5. Iniciar o servidor
+
+```bash
+node server.js
+```
+
+ou
+
+```bash
+npm start
+```
+
+---
+
+# Aceder à aplicação
+
+Abrir o navegador em:
+
+```
+http://localhost:3000/eventos.html
+```
+
+Não utilizar o Live Server do VS Code, pois poderá ocorrer bloqueio de CORS.
+
+---
+
+# API
+
+## Listar eventos
+
+```
+GET /api/eventos
+```
+
+---
+
+## Obter evento
+
+```
+GET /api/eventos/:id
+```
+
+---
+
+## Criar evento
+
+```
+POST /api/eventos
+```
+
+---
+
+## Atualizar evento
+
+```
+PUT /api/eventos/:id
+```
+
+---
+
+## Eliminar evento
+
+```
+DELETE /api/eventos/:id
+```
+
+---
+
+# Eventos existentes
+
+O projeto inclui os seguintes eventos:
+
+* Fundamentos do Marketing Digital
+* Redes Sociais na Prática
+* SEO e Posicionamento no Google
+* Publicidade Online
+* Marketing de Conteúdo
+* Inteligência Artificial aplicada ao Marketing
+* Planeamento de Marketing Digital para 2027
+
+---
+
+# Objetivos do projeto
+
+* Aplicar os conhecimentos de HTML, CSS e JavaScript.
+* Desenvolver uma API REST utilizando Node.js e Express.
+* Efetuar operações CRUD sobre uma base de dados MySQL.
+* Integrar frontend e backend através de pedidos HTTP.
+* Desenvolver uma aplicação web responsiva e organizada.
+
+---
+
+# Autor
+
+**Paulo Silva**
+
+Projeto académico desenvolvido no âmbito da formação em Desenvolvimento Web.
