@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo</>Silva</title>
+    <link rel="shortcut icon" href="Imagens\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+
+<body>
+    <br>
+    <div class="container" id="Logo">
+        <img src="Imagens\Logo Paulo SIlva.png">
+    </div>
+    <br><br>
+    <div class="menu" id="topo">
+        <a href="#">Início</a>
+        <a href="#paulo">Paulo</a>
+        <a href="index.html">Home</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contato.html">Contacto</a>
+    </div>
+
+<br><br>
+
+        <h1>Quartas Digitais</h1>
+<br><br>
+<div class="descricao">
+        <h2>Ciclo de Eventos de Marketing Digital</h2>
+        <p>
+            Um conjunto de encontros mensais destinados a empreendedores,
+            profissionais, estudantes e interessados em desenvolver competências
+            na área do Marketing Digital. Em cada sessão será abordado um tema
+            diferente, com exemplos práticos, tendências de mercado e ferramentas
+            úteis para aplicação imediata.
+        </p>
+
+        <p><strong>Horário:</strong> 19h00 às 20h30</p>
+        <p><strong>Periodicidade:</strong> Mensal, às quartas-feiras</p>
+        <p><strong>Formato:</strong> Online</p>
+<br> <br>
+
+       
+    </div>
+
+
+    
+  </header>
+
+  <!--
+    <header>: cabecalho da pagina. So texto, sem interacao.
+  -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <h2>Eventos programados</h2>
+      
+    </div>
+  </header>
+
+  <!--
+    <main>: conteudo principal da pagina.
+    Usar <main>, <header>, <section> em vez de so <div> ajuda
+    leitores de ecra e ferramentas a perceber a estrutura.
+  -->
+  <main class="conteudo">
+
+    <!--
+      ESTATISTICAS NO TOPO
+      ====================
+      Tres "caixas" com numeros vazios (-).
+      Cada <strong> tem um id para o JavaScript poder mudar o numero la dentro.
+      No app.js:  document.getElementById("stat-total").textContent = ...
+    -->
+    <section class="stats">
+
+    <div class="stat">
+        <strong id="stat-total">0</strong>
+        <span>Eventos</span>
+    </div>
+
+</section>
+
+    <!--
+      FORMULARIO PARA ADICIONAR EVENTO
+      ================================
+      <form>: agrupa varios campos.
+      Quando o utilizador clica em "Adicionar" (o botao type="submit"),
+      o browser dispara um evento "submit" que o JS apanha em:
+        formulario.addEventListener("submit", ...)
+
+      O id="form-musica" e o que o JS usa para encontrar este form.
+    -->
+    <form class="formulario" id="form-evento">
+
+    <input
+        type="text"
+        id="nome"
+        placeholder="Nome do evento"
+        maxlength="200"
+        required>
+
+    <input
+        type="date"
+        id="data"
+        required>
+
+    <button type="submit" id="btnSalvar">
+        Adicionar
+    </button>
+
+</form>
+
+    <!--
+      AREAS VAZIAS QUE O JAVASCRIPT VAI PREENCHER
+      ===========================================
+      Estes dois elementos comecam vazios.
+      O JS escreve dentro deles com:
+        mensagem.textContent = "..."   (texto simples)
+        lista.innerHTML = "..."        (HTML)
+    -->
+    <div id="mensagem"></div>
+    <div class="lista" id="lista-eventos"></div>
+
+  </main>
+
+  <br><br><br>
+
+  <footer class="bg-gray text-white text-center py-3">
+        <div class="container3">
+          <p class="pe">© 2026 Paulo Silva. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+
+  <!--
+    <script src="..."> carrega e executa o ficheiro JavaScript.
+    Fica no FIM do <body> para garantir que todos os elementos
+    HTML acima ja existem quando o JS comeca a correr
+    (senao, document.getElementById(...) devolveria null).
+  -->
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
